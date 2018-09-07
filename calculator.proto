@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+message NumberRequest {
+    float a = 1;
+    float b = 2;
+}
+message NumberResponse {
+    float value = 1;
+}
+
+service Calculator {
+    rpc AddAB(NumberRequest) returns (NumberResponse) {}
+    rpc MulAB(NumberRequest) returns (NumberResponse) {}
+}
